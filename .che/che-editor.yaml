@@ -20,20 +20,3 @@ inline:
       attributes:
         ports:
           - exposedPort: 80
-    - name: vista-websocket
-      container:
-        image: "jmalloc/echo-server"
-        endpoints:
-          - name: websocket
-            targetPort: 8080
-            exposure: public
-            secure: true
-            protocol: ws
-            attributes:
-              type: collocated-terminal
-              discoverable: false
-              cookiesAuthEnabled: true
-              urlRewriteSupported: true
-      attributes:
-        ports:
-          - exposedPort: 8080
